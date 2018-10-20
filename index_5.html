@@ -13,90 +13,92 @@
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
-
 <body>
-<main>
-    <form>
-        <div class="form-group">
-            <label for="vetName"> Veterinarian Name</label>
-            <input type="text" class="form-control" id="vetName">
-        </div>
+<div class="cover-container d-flex p-3 mx-auto flex-column">
+    <main role="main" class="inner cover">
 
-        <div class="form-group">
-            <label for="hospName"> Hospital Name</label>
-            <input type="text" class="form-control" id="hospName">
-        </div>
+        <main>
+            <form>
+                <div class="form-group">
+                    <label for="vetName"> Veterinarian Name</label>
+                    <input type="text" class="form-control" id="vetName">
+                </div>
 
-        <div class="form-group">
-            <label for="hospNum"> Hospital Number</label>
-            <input type="text" class="form-control" id="hospNum">
-        </div>
+                <div class="form-group">
+                    <label for="hospName"> Hospital Name</label>
+                    <input type="text" class="form-control" id="hospName">
+                </div>
 
-        <div class="form-group">
-            <label for="diagnosis"> Pet Diagnosis </label>
-            <input type="text" class="form-control" id="diagnosis">
-        </div>
+                <div class="form-group">
+                    <label for="hospNum"> Hospital Number</label>
+                    <input type="text" class="form-control" id="hospNum">
+                </div>
+
+                <div class="form-group">
+                    <label for="diagnosis"> Pet Diagnosis </label>
+                    <input type="text" class="form-control" id="diagnosis">
+                </div>
 
 
-        <div class="form-row">
+                <div class="form-row">
         <span class="checkbox-span">
             Prognosis
         </span>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="prog" id="progG" value="progG">
-                <label class="form-check-label" for="progG">G</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="prog" id="progF" value="progF">
-                <label class="form-check-label" for="progF">F</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="prog" id="progP" value="progP">
-                <label class="form-check-label" for="progP">P</label>
-            </div>
-        </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prog" id="progG" value="progG">
+                        <label class="form-check-label" for="progG">G</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prog" id="progF" value="progF">
+                        <label class="form-check-label" for="progF">F</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="prog" id="progP" value="progP">
+                        <label class="form-check-label" for="progP">P</label>
+                    </div>
+                </div>
 
-        <div class="form-group">
-            <label for="recProc"> Recommended Procedure</label>
-            <textarea class="form-control" rows="5" id="recProc">
+                <div class="form-group">
+                    <label for="recProc"> Recommended Procedure</label>
+                    <textarea class="form-control" rows="5" id="recProc">
 
             </textarea>
-        </div>
+                </div>
 
 
-        <div class="form-group">
-            <label for="treatEst"> Treatment Estimate</label>
-            <input type="text" class="form-control" id="treatEst">
-        </div>
+                <div class="form-group">
+                    <label for="treatEst"> Treatment Estimate</label>
+                    <input type="text" class="form-control" id="treatEst">
+                </div>
 
-        <div class="form-group">
-            <label for="sig"> Signature</label>
-            <input type="text" class="form-control" id="sig">
-        </div>
+                <div class="form-group">
+                    <label for="sig"> Signature</label>
+                    <input type="text" class="form-control" id="sig">
+                </div>
 
-        <div class="form-group">
-            <label for="date"> Date</label>
-            <input type="text" class="form-control" id="date">
-        </div>
+                <div class="form-group">
+                    <label for="date"> Date</label>
+                    <input type="text" class="form-control" id="date">
+                </div>
 
-        <div class="form-group">
-            <p>
-                I agree to a minimum 25% discount from the usual customary rate for treament to be funded by this grant,
-                if approved.
-            </p>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="agree">
-            <label class="form-check-label" for="agree">
-                I Agree
-            </label>
-        </div>
+                <div class="form-group">
+                    <p>
+                        I agree to a minimum 25% discount from the usual customary rate for treament to be funded by
+                        this grant,
+                        if approved.
+                    </p>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agree">
+                    <label class="form-check-label" for="agree">
+                        I Agree
+                    </label>
+                </div>
 
 
-    </form>
-</main>
+            </form>
+        </main>
 </body>
 </html>

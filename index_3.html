@@ -13,7 +13,6 @@
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -55,11 +54,11 @@
             Vaccines Current?
         </span>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="petVaccines" id="vaccinesYes" value="yes">
+                    <input class="form-check-input" type="radio" name="petVaccines" id="vaccinesYes" value="Y">
                     <label class="form-check-label" for="vaccinesYes">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="petVaccines" id="vaccinesNo" value="no">
+                    <input class="form-check-input" type="radio" name="petVaccines" id="vaccinesNo" value="N">
                     <label class="form-check-label" for="vaccinesNo">No</label>
                 </div>
             </div>
@@ -100,16 +99,16 @@
             Pet Insurance
         </span>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="petInsurance" id="insuranceYes" value="yes">
+                    <input class="form-check-input" type="radio" name="petInsurance" id="insuranceYes" value="Y">
                     <label class="form-check-label" for="insuranceYes">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="petInsurance" id="insuranceNo" value="no">
+                    <input class="form-check-input" type="radio" name="petInsurance" id="insuranceNo" value="N">
                     <label class="form-check-label" for="insuranceNo">No</label>
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="display: none" id="policyGroup">
                 <label for="policyNum">Policy # (if have Insurance)</label>
                 <input type="text" class="form-control" id="policyNum" name="policyNum">
             </div>
@@ -129,3 +128,20 @@
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+    $(function()
+    {
+        // Resident check
+        $("input[name='petInsurance']").change(function(){
+            if ($(this).val() === "Y")
+            {
+                $("#policyGroup").show();
+            }
+            else
+            {
+                $("#policyGroup").hide();
+            }
+        });
+    });
+</script>
