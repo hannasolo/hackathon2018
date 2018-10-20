@@ -18,76 +18,103 @@
 <body>
 <div class="cover-container d-flex p-3 mx-auto flex-column">
     <main role="main" class="inner cover">
-        <div class="application">
-            <h2>Application for Financial Assistance</h2>
-            <h4>Qualifications:</h4>
-            <span class="part">(Part 1 of 4)</span>
-        </div>
-        <!--SD country res?-->
-        <div class="form-row">
-            <span class="checkbox-span">Are you a San Diego County Resident?</span>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="resident" id="residentY" value="option1">
-                <label class="form-check-label" for="residentY">Yes</label>
+        <form method="post" action="saveProgress.php?section=1">
+            <!--title-->
+            <div class="application">
+                <h2>Application for Financial Assistance</h2>
+                <h4>Qualifications:</h4>
+                <span class="part">(Part 1 of 4)</span>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="resident" id="residentN" value="option2">
-                <label class="form-check-label" for="residentN">No</label>
-            </div>
-        </div>
 
-        <!--Pet seen by vet?-->
-        <div class="form-row">
-            <span class="checkbox-span">Has your pet been seen by a vet?</span>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="vetVisit" id="vetY" value="option1">
-                <label class="form-check-label" for="vetY">Yes</label>
+            <!--SD county resident?-->
+            <div class="form-row">
+                <span class="checkbox-span">Are you a San Diego County Resident?</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="resident" id="residentY" value="Y">
+                    <label class="form-check-label" for="residentY">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="resident" id="residentN" value="N">
+                    <label class="form-check-label" for="residentN">No</label>
+                </div>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="vetVisit" id="vetN" value="option2">
-                <label class="form-check-label" for="vetN">No</label>
-            </div>
-        </div>
 
-        <!--Gofundme?-->
-        <div class="form-row">
-            <span class="checkbox-span">Have you set up a GoFundMe?</span>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gofundme" id="gofundmeY" value="option1">
-                <label class="form-check-label" for="gofundmeY">Yes</label>
+            <!--Pet seen by vet?-->
+            <div class="form-row">
+                <span class="checkbox-span">Has your pet been seen by a vet?</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="vetVisit" id="vetY" value="Y">
+                    <label class="form-check-label" for="vetY">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="vetVisit" id="vetN" value="N">
+                    <label class="form-check-label" for="vetN">No</label>
+                </div>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="gofundme" id="gofundmeN" value="option2">
-                <label class="form-check-label" for="gofundmeN">No</label>
-            </div>
-        </div>
 
-        <!--Is your animal Spayed or Neutered?-->
-        <div class="form-row">
-            <span class="checkbox-span">Is your pet spayed/neutered?</span>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="spay" id="spayY" value="option1">
-                <label class="form-check-label" for="spayY">Yes</label>
+            <!--Gofundme?-->
+            <div class="form-row">
+                <span class="checkbox-span">Have you set up a GoFundMe?</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="goFundMe" id="goFundMeY" value="Y">
+                    <label class="form-check-label" for="goFundMeY">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="goFundMe" id="goFundMeN" value="N">
+                    <label class="form-check-label" for="goFundMeN">No</label>
+                </div>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="spay" id="spayN" value="option2">
-                <label class="form-check-label" for="spayN">No</label>
-            </div>
-        </div>
 
-        <!--CARE credit card?-->
-        <div class="form-row">
-            <span class="checkbox-span">Have you applied for CARE credit?</span>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="care" id="careY" value="option1">
-                <label class="form-check-label" for="careY">Yes</label>
+            <!--Is your animal Spayed or Neutered?-->
+            <div class="form-row">
+                <span class="checkbox-span">Is your pet spayed/neutered?</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="spay" id="spayY" value="Y">
+                    <label class="form-check-label" for="spayY">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="spay" id="spayN" value="N">
+                    <label class="form-check-label" for="spayN">No</label>
+                </div>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="care" id="careN" value="option2">
-                <label class="form-check-label" for="careN">No</label>
+
+            <!--CARE credit card?-->
+            <div class="form-row">
+                <span class="checkbox-span">Have you applied for CARE credit?</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="care" id="careY" value="Y">
+                    <label class="form-check-label" for="careY">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="care" id="careN" value="N">
+                    <label class="form-check-label" for="careN">No</label>
+                </div>
             </div>
-        </div>
+            <div id="error-resident" style="display:none">
+                Unfortunately FACE is not able to provide funding outside of San Diego County at this time. Please refer to our list of other resources for assistance: <a href="https://face4pets.org/wp-content/uploads/2017/01/Resources-for-Veterinary-Expenses.pdf">Resources for Veterinary Expenses.</a>
+            </div>
+            <br>
+            <button type="submit" id="submit-button" class="btn btn-primary">Next Section</button>
+        </form>
     </main>
 </div>
+<script type="text/javascript">
+    $(function()
+    {
+        $("input[name='resident']").change(function(){
+           if ($(this).val() === "N")
+           {
+               $("#error-resident").show();
+               $("#submit-button").prop("disabled", true);
+
+           }
+           else
+           {
+               $("#error-resident").hide();
+               $("#submit-button").prop("disabled", false);
+           }
+        });
+    });
+</script>
 </body>
 </html>
