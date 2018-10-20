@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>FACE</title>
@@ -18,6 +19,11 @@
 <body>
 <div class="cover-container d-flex p-3 mx-auto flex-column">
     <main role="main" class="inner cover">
+        <div class="application">
+            <h2>Application for Financial Assistance</h2>
+            <h4>Qualifications:</h4>
+            <span class="part">(Part 3 of 4)</span>
+        </div>
 
         <form>
             <div class="form-group">
@@ -91,19 +97,37 @@
 
             <div class="form-row">
         <span class="checkbox-span">
-            Pet Insurence
+            Pet Insurance
         </span>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="petVaccines" id="vaccinesYes" value="yes">
-                    <label class="form-check-label" for="vaccinesYes">Yes</label>
+                    <input class="form-check-input" type="radio" name="petInsurance" id="insuranceYes" value="yes">
+                    <label class="form-check-label" for="insuranceYes">Yes</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="petVaccines" id="vaccinesNo" value="no">
-                    <label class="form-check-label" for="vaccinesNo">No</label>
+                    <input class="form-check-input" type="radio" name="petInsurance" id="insuranceNo" value="no">
+                    <label class="form-check-label" for="insuranceNo">No</label>
                 </div>
             </div>
-            pet Insurance, radio buttons, if yes add policy ##
-            upload medical Info
+
+            <div class="form-group">
+                <label for="policyNum">Policy # (if have Insurance)</label>
+                <input type="text" class="form-control" id="policyNum">
+            </div>
+
+
+            <form>
+                <div class="form-group">
+                    <label for="medFile">Upload Pet's Medical Information</label>
+                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="medFile">
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group">
+                    <label for="petImage">Upload Pet's Image</label>
+                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="petImage">
+                </div>
+            </form>
 
         </form>
     </main>
