@@ -27,3 +27,8 @@ body {
     display: block;
     width: 100%;
 }
+
+.part
+{
+    font-size: small;
+}
