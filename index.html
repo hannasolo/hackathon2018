@@ -80,7 +80,7 @@
 
             <!--CARE credit card?-->
             <div class="form-row">
-                <span class="checkbox-span">Have you applied for CARE credit?</span>
+                <span class="checkbox-span">Have you applied for CareCredit?</span>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="care" id="careY" value="Y">
                     <label class="form-check-label" for="careY">Yes</label>
@@ -90,9 +90,40 @@
                     <label class="form-check-label" for="careN">No</label>
                 </div>
             </div>
-            <div id="error-resident" style="display:none">
-                Unfortunately FACE is not able to provide funding outside of San Diego County at this time. Please refer to our list of other resources for assistance: <a href="https://face4pets.org/wp-content/uploads/2017/01/Resources-for-Veterinary-Expenses.pdf">Resources for Veterinary Expenses.</a>
+
+            <!--Everyone in household check-->
+            <div class="form-row" id="household" style="display:none">
+                <span class="checkbox-span">Has everyone in your household applied for CareCredit?</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="household" id="householdY" value="Y">
+                    <label class="form-check-label" for="householdY">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="household" id="householdN" value="N">
+                    <label class="form-check-label" for="householdN">No</label>
+                </div>
             </div>
+
+            <!--Error Messages-->
+            <p id="error-resident" class="error" style="display:none">
+                Unfortunately FACE is not able to provide funding outside of San Diego County at this time. Please refer to our list of other resources for assistance: <a href="https://face4pets.org/wp-content/uploads/2017/01/Resources-for-Veterinary-Expenses.pdf">Resources for Veterinary Expenses.</a>
+            </p>
+            <p id="error-vetVisit" class="error" style="display:none">
+                Unfortunately FACE is not able to provide funding unless your pet has been seen by a veterinarian.
+            </p>
+            <p id="error-goFundMe" class="error" style="display:none">
+                Unfortunately FACE is not able to provide funding unless you have set up a GoFundMe. To do so, follow the steps here: <a href="https://support.gofundme.com/hc/en-us/articles/203604494-6-Steps-to-a-Successful-Campaign">GoFundMe Tutorial.</a>
+            </p>
+            </p>
+            <p id="error-spay" class="error" style="display:none">
+                All animals that receive FACE funding must be spayed or neutered. If an animal is not already spayed/neutered, it will be spayed/neutered at the time of the procedure. If this cannot be performed at the time of treatment, the owner will agree to have their animal spay/neutered within a set time frame (based on the animal’s health).
+            </p>
+            <p id="error-care" class="error" style="display:none">
+                 Unfortunately FACE is not able to provide funding unless you have applied for CareCredit. You can do so at <a href="https://www.carecredit.com/apply/">CareCredit</a>
+            </p>
+            <p id="error-household" class="error" style="display:none">
+                 Unfortunately FACE is not able to provide funding unless everyone in your household has applied for CareCredit. You can do so at <a href="https://www.carecredit.com/apply/">CareCredit</a>
+            </p>
             <br>
             <button type="submit" id="submit-button" class="btn btn-primary">Next Section</button>
         </form>
@@ -101,6 +132,7 @@
 <script type="text/javascript">
     $(function()
     {
+        // Resident check
         $("input[name='resident']").change(function(){
            if ($(this).val() === "N")
            {
@@ -113,6 +145,80 @@
                $("#error-resident").hide();
                $("#submit-button").prop("disabled", false);
            }
+        });
+
+        // Vet Visit Check
+        $("input[name='vetVisit']").change(function(){
+           if ($(this).val() === "N")
+           {
+               $("#error-vetVisit").show();
+               $("#submit-button").prop("disabled", true);
+
+           }
+           else
+           {
+               $("#error-vetVisit").hide();
+               $("#submit-button").prop("disabled", false);
+           }
+        });
+
+        // GoFundMe Check
+        $("input[name='goFundMe']").change(function(){
+           if ($(this).val() === "N")
+           {
+               $("#error-goFundMe").show();
+               $("#submit-button").prop("disabled", true);
+
+           }
+           else
+           {
+               $("#error-goFundMe").hide();
+               $("#submit-button").prop("disabled", false);
+           }
+        });
+
+        // Spay/Neuter Check
+        $("input[name='spay']").change(function(){
+           if ($(this).val() === "N")
+           {
+               $("#error-spay").show();
+               $("#submit-button").prop("disabled", true);
+
+           }
+           else
+           {
+               $("#error-spay").hide();
+               $("#submit-button").prop("disabled", false);
+           }
+        });
+
+        // CareCredit Check
+        $("input[name='care']").change(function(){
+           if ($(this).val() === "N")
+           {
+               $("#error-care").show();
+               $("#error-household").hide();
+               $("#submit-button").prop("disabled", true);
+
+           }
+           else
+           {
+               $("#error-care").hide();
+               $("#household").show();
+
+           }
+        });
+
+        // check if whole household has applied for care credit
+        $("input[name='household']").change(function() {
+            if ($(this).val() === 'N') {
+                $("#error-household").show();
+                $("#submit-button").prop("disabled", true);
+            }
+            else {
+                $("#error-household").hide();
+                $("#submit-button").prop("disabled", false);
+            }
         });
     });
 </script>
