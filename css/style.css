@@ -1,0 +1,29 @@
+body {
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgba(242,237,210,1) url(../img/background.jpg);
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 20px;
+}
+
+.cover-container {
+    width: 1000px;
+    min-width: 320px;
+    background: #ffffff;
+    min-height: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.checkbox-span {
+    padding-right: 10px;
+    margin: 10px 0 10px 0;
+    display: block;
+    width: 100%;
+}

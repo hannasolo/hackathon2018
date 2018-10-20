@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FACE</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--JS-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cover-container d-flex p-3 mx-auto flex-column">
+    <main role="main" class="inner cover">
+        <!--SD country res?-->
+        <div class="form-row">
+            <span class="checkbox-span">Are you a San Diego County Resident?</span>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="resident" id="residentY" value="option1">
+                <label class="form-check-label" for="residentY">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="resident" id="residentN" value="option2">
+                <label class="form-check-label" for="residentN">No</label>
+            </div>
+        </div>
+
+        <!--Pet seen by vet?-->
+        <div class="form-row">
+            <span class="checkbox-span">Has your pet been seen by a vet?</span>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="vetVisit" id="vetY" value="option1">
+                <label class="form-check-label" for="vetY">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="vetVisit" id="vetN" value="option2">
+                <label class="form-check-label" for="vetN">No</label>
+            </div>
+        </div>
+
+        <!--Gofundme?-->
+        <div class="form-row">
+            <span class="checkbox-span">Have you set up a GoFundMe?</span>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gofundme" id="gofundmeY" value="option1">
+                <label class="form-check-label" for="gofundmeY">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gofundme" id="gofundmeN" value="option2">
+                <label class="form-check-label" for="gofundmeN">No</label>
+            </div>
+        </div>
+
+        <!--Is your animal Spayed or Neutered?-->
+        <div class="form-row">
+            <span class="checkbox-span">Is your pet spayed/neutered?</span>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="spay" id="spayY" value="option1">
+                <label class="form-check-label" for="spayY">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="spay" id="spayN" value="option2">
+                <label class="form-check-label" for="spayN">No</label>
+            </div>
+        </div>
+
+        <!--CARE credit card?-->
+        <div class="form-row">
+            <span class="checkbox-span">Have you applied for CARE credit?</span>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care" id="careY" value="option1">
+                <label class="form-check-label" for="careY">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care" id="careN" value="option2">
+                <label class="form-check-label" for="careN">No</label>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
