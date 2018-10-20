@@ -24,15 +24,15 @@
             <span class="part">(Part 3 of 4)</span>
         </div>
 
-        <form>
+        <form method="post" action="saveProgress.php?section=3">
             <div class="form-group">
                 <label for="petName">Pet Name</label>
-                <input type="text" class="form-control" id="petName">
+                <input type="text" class="form-control" id="petName" name="petName">
             </div>
 
             <div class="form-group">
                 <label for="petBreed">Pet Breed</label>
-                <input type="text" class="form-control" id="petBreed">
+                <input type="text" class="form-control" id="petBreed" name="petBreed">
             </div>
 
             <div class="form-row">
@@ -65,33 +65,33 @@
 
             <div class="form-group">
                 <label for="hospital">Vet Hospital</label>
-                <input type="text" class="form-control" id="hospital">
+                <input type="text" class="form-control" id="hospital" name="hospital">
             </div>
 
 
             <div class="form-group">
                 <label for="hospitalNum">Vet Number</label>
-                <input type="text" class="form-control" id="hospitalNum">
+                <input type="text" class="form-control" id="hospitalNum" name="hospitalNum">
             </div>
 
             <div class="form-group">
                 <label for="petMedCond">Pet's Medical Condition</label>
-                <input type="text" class="form-control" id="petMedCond">
+                <input type="text" class="form-control" id="petMedCond" name="petMedCond">
             </div>
 
             <div class="form-group">
                 <label for="ownDuration">Ownership Duration</label>
-                <input type="text" class="form-control" id="ownDuration">
+                <input type="text" class="form-control" id="ownDuration" name = ownDuration>
             </div>
 
             <div class="form-group">
                 <label for="DOB">Pet's Date of Birth</label>
-                <input type="text" class="form-control" id="DOB">
+                <input type="text" class="form-control" id="DOB" name="DOB">
             </div>
 
             <div class="form-group">
                 <label for="petFrom">Acquired Pet From</label>
-                <input type="text" class="form-control" id="petFrom">
+                <input type="text" class="form-control" id="petFrom" name="petFrom">
             </div>
 
             <div class="form-row">
@@ -110,24 +110,19 @@
 
             <div class="form-group" style="display: none" id="policyGroup">
                 <label for="policyNum">Policy # (if have Insurance)</label>
-                <input type="text" class="form-control" id="policyNum">
+                <input type="text" class="form-control" id="policyNum" name="policyNum">
             </div>
 
+            <div class="form-group">
+                <label for="medFile">Upload Pet's Medical Information</label>
+                <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="medFile" name="medFile">
+            </div>
 
-            <form>
-                <div class="form-group">
-                    <label for="medFile">Upload Pet's Medical Information</label>
-                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="medFile">
-                </div>
-            </form>
-
-            <form>
-                <div class="form-group">
-                    <label for="petImage">Upload Pet's Image</label>
-                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="petImage">
-                </div>
-            </form>
-
+            <div class="form-group">
+                <label for="petImage">Upload Pet's Image</label>
+                <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="petImage" name="petImage">
+            </div>
+            <button type="submit" id="submit-button" class="btn btn-primary">Next Section</button>
         </form>
     </main>
 </div>
