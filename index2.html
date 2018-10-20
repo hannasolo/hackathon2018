@@ -12,14 +12,13 @@
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="cover-container d-flex p-3 mx-auto flex-column">
     <main role="main" class="inner cover">
 
-        <form>
+        <form method="post" action="saveProgress.php?section=2">
             <div class="form-group">
                 <label for="firstName">First Name</label>
                 <input type="text" class="form-control" id="firstName">
@@ -85,12 +84,12 @@
                 <input type="text" class="form-control" id="finAss">
             </div>
 
-            <form>
-                <div class="form-group">
-                    <label for="incomeProof">Upload proof of Income</label>
-                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="incomeProof">
-                </div>
-            </form>
+            <div class="form-group">
+                <label for="incomeProof">Upload proof of Income</label>
+                <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" id="incomeProof">
+            </div>
+
+            <button type="submit" id="submit-button" class="btn btn-primary">Next Section</button>
         </form>
     </main>
 </div>
