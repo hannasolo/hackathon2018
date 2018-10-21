@@ -35,5 +35,9 @@ class PetApplication
     public $policyNum;
     public $medFile;
     public $petImagepublic;
+    public $vetEmail;
+    public $sig;
+    public $date;
+    public $agreepublic;
 
 }

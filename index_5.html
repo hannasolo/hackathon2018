@@ -26,25 +26,25 @@
             <br>
         </div>
 
-        <form>
+        <form method="post" action="saveProgress.php?section=5">
             <div class="form-group">
                 <label for="vetName"> Veterinarian Name</label>
-                <input type="text" class="form-control" id="vetName">
+                <input type="text" class="form-control" name="vetName" id="vetName">
             </div>
 
             <div class="form-group">
                 <label for="hospName"> Hospital Name</label>
-                <input type="text" class="form-control" id="hospName">
+                <input type="text" class="form-control" name="hospName" id="hospName">
             </div>
 
             <div class="form-group">
                 <label for="hospNum"> Hospital Number</label>
-                <input type="text" class="form-control" id="hospNum">
+                <input type="text" class="form-control" name="hospNum" id="hospNum">
             </div>
 
             <div class="form-group">
                 <label for="diagnosis"> Pet Diagnosis </label>
-                <input type="text" class="form-control" id="diagnosis">
+                <input type="text" class="form-control" name="diagnosis" id="diagnosis">
             </div>
 
 
@@ -69,23 +69,23 @@
 
             <div class="form-group">
                 <label for="recProc"> Recommended Procedure</label>
-                <textarea class="form-control" rows="5" id="recProc"></textarea>
+                <textarea class="form-control" rows="5" name="recProc" id="recProc"></textarea>
             </div>
 
 
             <div class="form-group">
                 <label for="treatEst"> Treatment Estimate</label>
-                <input type="text" class="form-control" id="treatEst">
+                <input type="text" class="form-control" name="treatEst" id="treatEst">
             </div>
 
             <div class="form-group">
                 <label for="sig"> Signature</label>
-                <input type="text" class="form-control" id="sig">
+                <input type="text" class="form-control" name="sig" id="sig">
             </div>
 
             <div class="form-group">
                 <label for="date"> Date</label>
-                <input type="text" class="form-control" id="date">
+                <input type="text" class="form-control" name="date" id="date">
             </div>
 
             <div class="form-group">
@@ -96,7 +96,7 @@
                 </p>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="agree">
+                <input class="form-check-input" type="checkbox" value="" name="agree" id="agree">
                 <label class="form-check-label" for="agree">
                     I Agree
                 </label>
