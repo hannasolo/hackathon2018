@@ -75,6 +75,16 @@
             $fp = fopen('submissions/'.session_id().'.json', 'w');
             fwrite($fp, json_encode($petApplication));
             fclose($fp);
+
+            // the message
+            $msg = "Please click the following link to complete your patients financial assistance form:http://hackathon01.cs.csusm.edu/guest-hack014/loadProgress.php?session=".session_id();
+
+            // use wordwrap() if lines are longer than 70 characters
+            $msg = wordwrap($msg,70);
+
+            // send email
+            mail($petApplication->vetEmail,"FACE Foundation - Financial Assistance Form Request",$msg);
+
             header('Location: thankUser.html');
             break;
 
@@ -91,7 +101,8 @@
             $petApplication->agree = $_POST["agree"];
 
             $_SESSION["petApplication"] = $petApplication;
-            header('Location: index_5.html');
+            // email to FACE Foundation
+            header('Location: thankVet.html');
             break;
 
         default:
