@@ -60,6 +60,39 @@
             $petApplication->medFile = $_POST["medFile"];
             $petApplication->petImage = $_POST["petImage"];
 
+            $_SESSION["petApplication"] = $petApplication;
+            header('Location: index4.html');
+            break;
+
+        case "4":
+            $petApplication->vetEmail = $_POST["vetEmail"];
+            $petApplication->sig = $_POST["sig"];
+            $petApplication->date = $_POST["date"];
+            $petApplication->agree = $_POST["agree"];
+
+            $_SESSION["petApplication"] = $petApplication;
+
+            $fp = fopen('submissions/'.session_id().'.json', 'w');
+            fwrite($fp, json_encode($petApplication));
+            fclose($fp);
+            header('Location: thankUser.html');
+            break;
+
+        case "5":
+            $petApplication->vetName = $_POST["vetName"];
+            $petApplication->hospName = $_POST["hospName"];
+            $petApplication->hospNum = $_POST["hospNum"];
+            $petApplication->diagnosis = $_POST["diagnosis"];
+            $petApplication->prog = $_POST["prog"];
+            $petApplication->recProc = $_POST["recProc"];
+            $petApplication->treatEst = $_POST["treatEst"];
+            $petApplication->sig = $_POST["sig"];
+            $petApplication->date = $_POST["date"];
+            $petApplication->agree = $_POST["agree"];
+
+            $_SESSION["petApplication"] = $petApplication;
+            header('Location: index_5.html');
+            break;
 
         default:
             print_r($_POST);

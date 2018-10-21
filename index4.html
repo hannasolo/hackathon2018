@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>FACE</title>
-            <!--CSS-->
-            <link rel="stylesheet" href="css/bootstrap.min.css">
-            <link rel="stylesheet" href="css/style.css">
+    <title>FACE</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
-            <!--JS-->
-            <script
-                    src="https://code.jquery.com/jquery-3.3.1.js"
-                    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-                    crossorigin="anonymous"></script>
-            <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        </head>
+    <!--JS-->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
 <body>
 <div class="cover-container d-flex p-3 mx-auto flex-column">
     <main role="main" class="inner cover">
@@ -30,11 +26,11 @@
             <br>
         </div>
 
-        <form>
+        <form method="post" action="saveProgress.php?section=4">
 
             <div class="form-group">
                 <label for="vetEmail"> Veterinarian Email Address</label>
-                <input type="email" class="form-control" id="vetEmail" placeholder="name@example.com">
+                <input type="email" class="form-control" id="vetEmail" name="vetEmail" placeholder="name@example.com">
                 <br>
             </div>
 
@@ -42,7 +38,12 @@
                 Terms and Conditions
             </h4>
             <ul>
-                <li>All animals that receive FACE funding must be spayed or neutered. If an animal is not already spayed/neutered, it will be spayed/neutered at the time of the procedure. If this cannot be performed at the time of treatment, the owner will agree to have their animal spay/neutered within a set time frame (based on the animal’s health). This will be performed at the owner’s expense and is not covered by the initial grant.</li>
+                <li>All animals that receive FACE funding must be spayed or neutered. If an animal is not already
+                    spayed/neutered, it will be spayed/neutered at the time of the procedure. If this cannot be
+                    performed at the time of treatment, the owner will agree to have their animal spay/neutered within a
+                    set time frame (based on the animal’s health). This will be performed at the owner’s expense and is
+                    not covered by the initial grant.
+                </li>
                 <li>
                     Orthopedic surgeries must be done by a board-certified surgeon.
                 </li>
@@ -56,30 +57,33 @@
                     Recipients of FACE funding agree to allow FACE to use their story, photos, and video.
                 </li>
                 <li>
-                    Recipients are asked to do whatever possible to help FACE save other family pets. This includes volunteering and participating in special events.
+                    Recipients are asked to do whatever possible to help FACE save other family pets. This includes
+                    volunteering and participating in special events.
                 </li>
                 <li>
-                    FACE strongly encourages all grantees to consider pet insurance. Embrace Pet Insurance will provide a 10% discount off of policy premiums if you mention FACE.
+                    FACE strongly encourages all grantees to consider pet insurance. Embrace Pet Insurance will provide
+                    a 10% discount off of policy premiums if you mention FACE.
                 </li>
             </ul>
 
             <div class="form-group">
                 <label for="sig"> Signature</label>
-                <input type="text" class="form-control" id="sig">
+                <input type="text" class="form-control" name="sig" id="sig">
             </div>
 
             <div class="form-group">
                 <label for="date"> Date</label>
-                <input type="text" class="form-control" id="date">
+                <input type="text" class="form-control" name="date" id="date">
             </div>
 
             <div class="form-group">
                 <p>
-                    I guarantee that everything submitted is true to the best of my knowledge and agree with the terms and conditions presented by FACE Foundation.
+                    I guarantee that everything submitted is true to the best of my knowledge and agree with the terms
+                    and conditions presented by FACE Foundation.
                 </p>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="agree">
+                <input class="form-check-input" type="checkbox" value="" name="agree" id="agree">
                 <label class="form-check-label" for="agree">
                     I Agree
                 </label>
@@ -89,10 +93,5 @@
         </form>
     </main>
 </div>
-</body>
-</html></title>
-</head>
-<body>
-
 </body>
 </html>
