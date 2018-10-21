@@ -29,29 +29,30 @@
         <form method="post" action="saveProgress.php?section=5">
             <div class="form-group">
                 <label for="vetName"> Veterinarian Name</label>
-                <input type="text" class="form-control" name="vetName" id="vetName">
+                <input type="text" class="form-control" name="vetName" id="vetName" required>
             </div>
 
             <div class="form-group">
                 <label for="hospName"> Hospital Name</label>
-                <input type="text" class="form-control" name="hospName" id="hospName">
+                <input type="text" class="form-control" name="hospName" id="hospName" required>
             </div>
 
             <div class="form-group">
                 <label for="hospNum"> Hospital Number</label>
-                <input type="text" class="form-control" name="hospNum" id="hospNum">
+                <input type="text" class="form-control" name="hospNum" id="hospNum"required>
             </div>
 
             <div class="form-group">
                 <label for="diagnosis"> Pet Diagnosis </label>
-                <input type="text" class="form-control" name="diagnosis" id="diagnosis">
+                <input type="text" class="form-control" name="diagnosis" id="diagnosis"required>
             </div>
 
+            <div class="form-group">
+                <label for="prognosis"> Prognosis </label>
+                <input type="text" class="form-control" name="prognosis" id="prognosis"required>
+            </div>
 
             <div class="form-row">
-                 <span class="checkbox-span">
-                    Prognosis
-                 </span>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="prog" id="progG" value="progG">
                     <label class="form-check-label" for="progG">G</label>
@@ -69,23 +70,23 @@
 
             <div class="form-group">
                 <label for="recProc"> Recommended Procedure</label>
-                <textarea class="form-control" rows="5" name="recProc" id="recProc"></textarea>
+                <textarea class="form-control" rows="5" name="recProc" id="recProc" required></textarea>
             </div>
 
 
             <div class="form-group">
                 <label for="treatEst"> Treatment Estimate</label>
-                <input type="text" class="form-control" name="treatEst" id="treatEst">
+                <input type="text" class="form-control" name="treatEst" id="treatEst" required>
             </div>
 
             <div class="form-group">
                 <label for="sig"> Signature</label>
-                <input type="text" class="form-control" name="sig" id="sig">
+                <input type="text" class="form-control" name="sig" id="sig"required>
             </div>
 
             <div class="form-group">
                 <label for="date"> Date</label>
-                <input type="text" class="form-control" name="date" id="date">
+                <input type="text" class="form-control" name="date" id="date" required>
             </div>
 
             <div class="form-group">
